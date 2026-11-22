@@ -1,0 +1,13 @@
+{
+  "name": "agent-model-tag",
+  "owner": {
+    "name": "YoungMoneyInvestments"
+  },
+  "plugins": [
+    {
+      "name": "agent-model-tag",
+      "source": "./",
+      "description": "Compact model and effort tag on every subagent row."
+    }
+  ]
+}
