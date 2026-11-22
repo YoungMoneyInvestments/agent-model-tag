@@ -12,7 +12,9 @@ const short = (id: string): string => {
 
 export const register: Register = on => {
   on('ui.render', { component: 'AgentRow' }, ($, e, next) => {
-    const { model, effort, label } = e.props
+    const { model, label, lastRequest } = e.props
+    // What the last request actually carried (covers agents that take the session's effort), else the agent's own setting.
+    const effort = lastRequest?.effort ?? e.props.effort
     if (!model) return next(e)
     const fx = effort === undefined ? '' : '·' + (typeof effort === 'number' ? effort : EFFORT[effort] ?? effort)
     return next({ ...e, props: { ...e.props, label: `${short(model)}${fx} ${label}` } })

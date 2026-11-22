@@ -7,7 +7,7 @@ A Claude Code mod that shows which **model** and which **effort level** each sub
 ```
 ● S5.5·hi  Reviewing auth module
 ● O5.5·xh  Planning migration
-● H5     Searching call sites
+● H5.5·hi  Searching call sites
 ```
 
 ## Reading the tag
@@ -18,7 +18,7 @@ A Claude Code mod that shows which **model** and which **effort level** each sub
 | `5.5` | model version |
 | `lo` `md` `hi` `xh` `mx` | low, medium, high, xhigh, max effort |
 
-No effort part (just `S5.5`) means that agent has no effort of its own and takes the session's. Rows whose model isn't known yet are left untouched.
+The effort shown is what the agent's last request actually carried, so agents that inherit the session's effort show it too. No effort part (just `S5.5`) means no effort was sent, or the agent hasn't made a request yet. Rows whose model isn't known yet are left untouched.
 
 ## Install
 
