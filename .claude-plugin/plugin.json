@@ -1,6 +1,6 @@
 {
   "name": "agent-model-tag",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adds a compact model/effort tag (e.g. S5.5·hi) to each subagent row, in the same line.",
   "author": {
     "name": "YoungMoneyInvestments"
